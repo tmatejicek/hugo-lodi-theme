@@ -1,9 +1,11 @@
 <nav class="main-navigation stuckMenu">
     <a href="{{ .Site.BaseURL }}">
-        <img class="logo" src="{{ .Site.BaseURL }}img/logo.png" alt="My Portfolio">
+        <img class="logo" src="{{ .Site.BaseURL }}img/logo.png" alt="{{ .Site.Title }}">
     </a>
     <h5>{{ .Params.nav_heading }}</h5>
     <div class="sub-navigation">
-        <a href="{{ .Site.BaseURL }}" class="main-navigation-link" data-scroll-goto="2">Case Studies</a>
+        <a href="{{ .Site.BaseURL }}" class="main-navigation-link" id="about">{{ .Site.Params.about_title }}</a>
+        
+        <a href="{{ .Site.BaseURL }}" class="main-navigation-link" data-scroll-goto="2">{{ .Site.Params.case_studies.title }}</a>
     </div>
 </nav>

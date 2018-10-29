@@ -1,10 +1,13 @@
-<section>
+<section data-scroll-index="0">
     <div class="main-case-study">
         <h1 class="title" style="text-align: center;">{{ .Params.case_title }}</h1>
         <h2 class="subtitle" style="text-align: center;">{{ .Params.case_subtitle }}</h2>
-        <img src="img/{{ .Params.case_feature_img }}" alt="">
+        {{ if .Params.case_feature_img }}
+        <img src="{{ .Site.BaseURL }}img/{{ .Params.case_feature_img }}" alt="">
+        {{end}}
         <p class="summary">{{ .Params.case_summary }}</p>
         <div class="case-details">
+            {{ if .Params.team }}
             <div class="case-details-item">
                 <p><strong>Team</strong>
                     {{ range .Params.team }}
@@ -12,6 +15,8 @@
                     {{end}}
                 </p>
             </div>
+            {{end}}
+            {{ if .Params.roles }}
             <div class="case-details-item">
                 <p><strong>My Role</strong>
                     {{ range .Params.roles }}
@@ -19,6 +24,8 @@
                     {{ end }}
                 </p>
             </div>
+            {{end}}
+            {{ if .Params.methods }}
             <div class="case-details-item">
                 <p><strong>Methods</strong>
                     {{ range .Params.methods }}
@@ -26,8 +33,12 @@
                     {{ end }}
                 </p>
             </div>
+            {{end}}
         </div>
+        {{ if .Description }}
         <h1 style="color: black; font-family: merriweather; font-size: 26px; line-height: 1.7em; margin-top: 20px;">{{ .Description }}</h1>
+        {{end}}
+        {{ if .Params.button_links }}
         <div class="case-links">
             {{ $baseUrl := .Site.BaseURL }}
             {{ range $element := .Params.button_links }}
@@ -43,5 +54,6 @@
             </div>
             {{ end }}
         </div>
+        {{ end }}
     </div>
 </section>

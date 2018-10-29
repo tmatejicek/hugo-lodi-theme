@@ -1,3 +1,4 @@
+{{ if .Params.Testimonial }}
 <section class="testimonial" style="background:#fdfcfc;">
     <div class="results-content">
         <h1>"{{ .Params.Testimonial }}"</h1>
@@ -7,3 +8,4 @@
         <h3>{{ .Params.testimonial_subtitle }}</h3>
     </div>
 </section>
+{{ end }}
