@@ -17,6 +17,10 @@
             {{ partial "process.html" . }}
             {{ end }}
 
+            {{ if .Site.Params.social.enable }}
+            {{ partial "social.html" . }}
+            {{ end }}
+
             {{ if .Site.Params.case_studies.enable }}
             {{ partial "case_studies.html" . }}
             {{ end }}

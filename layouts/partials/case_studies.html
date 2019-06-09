@@ -2,7 +2,9 @@
     <div class="case-studies">
         <div class="header">
             <h1 class="title">{{ .Site.Params.case_studies.Title }}</h1>
+            {{ if .Site.Params.case_studies.Subtitle }}
             <h2 class="subtitle">{{ .Site.Params.case_studies.Subtitle }}</h2>
+            {{ end }}
         </div>
         <div class="case-studies-wrapper">
             {{ $baseUrl := .Site.BaseURL }}

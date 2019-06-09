@@ -124,8 +124,8 @@ footer {
 }
 
 section {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   border-bottom: 1px solid #F0F0F0;
   padding-left: 30px;
   padding-right: 30px;
@@ -144,7 +144,7 @@ section {
   max-width: 1000px;
 }
 
-.process {
+.process, .social {
   max-width: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,7 +252,7 @@ section {
   margin-left: 15px;
 }
 
-.process-wrapper {
+.process-wrapper, .social-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,0 +1,15 @@
+<section data-scroll-index="1">
+    <div class="social">
+        <div class="header">
+            <h1 class="title">{{ .Site.Params.social.Title }}</h1>
+            <h2 class="subtitle">{{ .Site.Params.social.Subtitle }}</h2>
+        </div>
+        <div class="social-wrapper">
+            {{ range $element := sort .Site.Data.social "weight" }}
+            <div class="social-item" style="width: 50%; float: left;">
+                <p>{{ $element.embed | markdownify }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

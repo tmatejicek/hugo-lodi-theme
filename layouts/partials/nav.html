@@ -8,6 +8,10 @@
         {{ if .Site.Params.process.enable }}
         <a href="#" class="main-navigation-link" data-scroll-goto="1">{{ .Site.Params.process.title }}</a>
         {{ end }}
+        
+        {{ if .Site.Params.social.enable }}
+        <a href="#" class="main-navigation-link" data-scroll-goto="1">{{ .Site.Params.social.title }}</a>
+        {{ end }}
 
         {{ if .Site.Params.case_studies.enable }}
         <a href="#" class="main-navigation-link" data-scroll-goto="2">{{ .Site.Params.case_studies.title }}</a>
