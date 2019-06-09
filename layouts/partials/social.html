@@ -6,7 +6,7 @@
         </div>
         <div class="social-wrapper">
             {{ range $element := sort .Site.Data.social "weight" }}
-            <div class="social-item" style="width: 50%; min-width: 340px; max-width: 500px;">
+            <div class="social-item">
                 <p>{{ $element.embed | markdownify }}</p>
             </div>
             {{ end }}
